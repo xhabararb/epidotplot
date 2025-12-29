@@ -236,7 +236,7 @@ epidotplot plot \
 --fst-methylation chr1.bed \
 --snd-methylation chr1.bed \
 -w 5 -m 30 \
--o out --p --enlarge-small \
+-o out --parallel --enlarge-small
 
 [00:00:01]   finished parsing sequence data                                                                        
 [00:00:04]   finished parsing methylation data
