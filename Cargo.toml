@@ -1,0 +1,33 @@
+[package]
+name = "epidotplot"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+image = "0.25.5"
+imageproc = "0.25.0"
+ab_glyph = "0.2.31"
+
+chrono = "0.4.41"
+
+itertools = "0.14.0"
+thiserror = "2.0.12"
+
+num-format = "0.4.4"
+
+clap = { version = "4.5.41", features = ["derive"] }
+rayon = "1.11.0"
+
+libsais = { version = "0.2.0", features = ["openmp"] }
+png = "0.17.16"
+indicatif = { version = "0.18.3", features = ["rayon"] }
+bincode = "2.0.1"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.145"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "epidotplot"
+path = "src/main.rs"
