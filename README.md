@@ -8,7 +8,7 @@ _Epidotplot_ is developed and tested on Linux systems; behavior on other operati
 # Installation
 ```
 # install
-cargo install --git https://gitlab.fi.muni.cz/xhanak1/epidotplot-testing.git \
+cargo install --git https://github.com/xhabararb/epidotplot.git \
 --locked
 
 # uninstall
