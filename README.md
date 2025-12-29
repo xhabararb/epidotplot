@@ -3,8 +3,7 @@ _Epidotplot_ is a DNA sequence visualization tool, generating single-sequence or
 It accepts FASTA/MultiFASTA sequences (with optional reverse-complement transformation), integrates bedMethyl/BedGraph methylation tracks, and produces plots that highlight sequence similarity, structural features, and methylation patterns. It also allows restricting the visualization to selected regions of sequences.
 
 # Platform support
-_Epidotplot_ is developed and tested on Linux systems.
-While the codebase is portable Rust, behavior on other operating systems may differ.
+_Epidotplot_ is developed and tested on Linux systems; behavior on other operating systems may differ.
 
 # Installation
 ```
