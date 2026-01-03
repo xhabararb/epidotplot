@@ -209,12 +209,20 @@ Defaults to the current working directory.
 Output is a PNG raster image.
 
 # Examples
+
+## Example data
+The example FASTA sequence (HG002v1.1) is taken from the HG002 assembly repository: https://github.com/marbl/HG002/.
+
+Methylation and other annotation tracks for the genome are available via the T2T genome hub: https://github.com/marbl/T2T-Browser.
+
+The HG002v1.1 5mC methylation file included in this repository (examples/data/chr1_PATERNAL_5mC.bed.gz) is gzip-compressed and trimmed to include only chr1_PATERNAL.
+
 ```
 epidotplot plot \
 --sequence hg002v1.1.fasta \
---methylation 5mC.bed \
+--methylation chr1_PATERNAL_5mC.bed \
 --region chr1_PATERNAL:15000-45000 \
--o out --word-length 30 -d 4 --parallel --enlarge-small
+-o out --word-length 30 -d 4 -p --enlarge-small
 
 [00:00:01]   finished parsing sequence data              
 [00:00:46]   finished parsing methylation data 
@@ -227,16 +235,15 @@ rendering image...
 plot saved as PNG to out/chr1_PATERNAL_15000-45000__chr1_PATERNAL_15000-45000.png
 ```
 
-![](images/chr1_PATERNAL_15000-45000__chr1_PATERNAL_15000-45000__2025-11-23_18-39-23.png)
+![](examples/images/chr1_PATERNAL_15000-45000__chr1_PATERNAL_15000-45000__2025-11-23_18-39-23.png)
 
 ```
 epidotplot plot \                             
---fst-sequence chr1.fa \
---snd-sequence chr1.fa --fst-region 40000-40050 --snd-region 40000-40050 \
---fst-methylation chr1.bed \
---snd-methylation chr1.bed \
+--sequence hg002v1.1.fasta \
+--region chr1_PATERNAL:40000-40050 \
+--methylation chr1_PATERNAL_5mC.bed \
 -w 5 -m 30 \
--o out --parallel --enlarge-small
+-o out -p --enlarge-small
 
 [00:00:01]   finished parsing sequence data                                                                        
 [00:00:04]   finished parsing methylation data
@@ -249,4 +256,4 @@ rendering image...
 plot saved as PNG to out/40000-40050__40000-40050.png 
 ```
 
-![](images/40000-40050__40000-40050__2025-11-23_19-11-21.png)
+![](examples/images/40000-40050__40000-40050__2025-11-23_19-11-21.png)
